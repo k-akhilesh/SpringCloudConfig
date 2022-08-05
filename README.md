@@ -26,3 +26,6 @@ Usage: java -Dencrypt.key=<<your_own_key>> -jar spring-config-server-0.0.1-SNAPS
 
   
 The client application is equipped with Actuator if you want to refresh the properties at runtime. To do that you need to invoke API /actuator/refresh on client side. It will automatically refresh the modified properties. To refresh the required properties, the bean needs to be annotated with <i>@RefreshScope</i>. 
+
+
+Before compiling the projects please update the application.properties for both client and server with appropriate username/passwords.
