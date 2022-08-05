@@ -20,3 +20,6 @@ CREATE TABLE `PROPERTIES` (
 )
   
 This server is enabled with Basic Authentication and Encryption of values. To encrypt invoke /encrypt endpoint on the server URL. Decryption endpoint is enabled on the endpoint. You can disable /decrypt endpoint for production usage. If any value is appended with {cipher} then that automatically becomes candidate for decryption. Else the value will be returned as it is. If any value fails to get decrypted then the key will be prepended with <i>invaid.</i> text.
+
+If you intend to encrypt any value the encryption key needs to be added in application.properties of the server or it can also be passed as VM argument. 
+Usage: java -Dencrypt.key=<<your_own_key>> -jar spring-config-server-0.0.1-SNAPSHOT.war
