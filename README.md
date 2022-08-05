@@ -23,3 +23,6 @@ This server is enabled with Basic Authentication and Encryption of values. To en
 
 If you intend to encrypt any value the encryption key needs to be added in application.properties of the server or it can also be passed as VM argument. 
 Usage: java -Dencrypt.key=<<your_own_key>> -jar spring-config-server-0.0.1-SNAPSHOT.war
+
+  
+The client application is equipped with Actuator if you want to refresh the properties at runtime. To do that you need to invoke API /actuator/refresh on client side. It will automatically refresh the modified properties. To refresh the required properties, the bean needs to be annotated with <i>@RefreshScope</i>. 
